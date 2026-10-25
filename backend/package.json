@@ -1,0 +1,38 @@
+{
+  "name": "kglkicks-backend",
+  "version": "1.0.0",
+  "description": "Kigali Kicks backend API",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "migrate": "node-pg-migrate up",
+    "migrate:down": "node-pg-migrate down",
+    "seed": "node src/db/seed.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "pg": "^8.12.0",
+    "zod": "^3.23.8",
+    "bcrypt": "^5.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "helmet": "^7.1.0",
+    "cors": "^2.8.5",
+    "express-rate-limit": "^7.4.0",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.33.4",
+    "pino": "^9.1.0",
+    "pino-pretty": "^11.2.1",
+    "dotenv": "^16.4.5",
+    "citext": "^1.0.1",
+    "pgcrypto": "^1.0.0"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.5",
+    "supertest": "^7.0.0",
+    "node-pg-migrate": "^7.5.1"
+  }
+}
